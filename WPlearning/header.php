@@ -5,8 +5,6 @@ This is basically a part of template file, it is called multiple times in a webs
 
 */
 
-
-
 ?>
 
 
@@ -27,9 +25,21 @@ This is basically a part of template file, it is called multiple times in a webs
     <!-- <link rel="stylesheet" href="<?php echo get_theme_file_uri() ?>/style.css"> -->
 
     <!-- it can load all the scripts or styles -->
-
     <?php wp_head() ?>
 
 </head>
 
+
+
+
+
 <body>
+    <!-- this script is for testing the jquery -->
+    <script>
+
+        jQuery(document).ready(function ($) {
+
+            $("h1").fadeOut();
+
+        });
+    </script>
