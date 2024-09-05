@@ -1,6 +1,18 @@
 <?php
 // This is the functions.php file
 
+// it can add a custom logo functionality/support in the theme, customize > site identity
+add_theme_support('custom-logo');
+
+
+// this function can register a menu in the WordPress dashboard
+register_nav_menus( array(
+    'primary'   => __( 'Primary Menu', 'wplearning' ),
+    'secondary' => __( 'Secondary Menu', 'wplearning' ),
+    'footer' => __( 'Footer Menu', 'wplearning' ),
+) );
+
+// styles and scripts can be called using wp_head() in the header .php
 function wplearning_theme_scripts() {
     
     // bootstrap CSS

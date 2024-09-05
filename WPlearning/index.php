@@ -1,5 +1,6 @@
 <?php
 // This is for index
+
 get_header();
 ?>
 
@@ -7,10 +8,10 @@ get_header();
 <!-- including a template file  -->
 
 
-<?php get_template_part('template-files/home', 'featured'); ?>
+<!-- <?php get_template_part('template-files/home', 'featured'); ?> -->
 
-<img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner.jpeg"
-    style="width:100px; height:100px;"><!-- this is a way to add logo, img or dirctory in a theme -->
+<!-- <img src="<?php echo get_template_directory_uri(); ?>/assets/img/banner.jpeg"
+    style="width:100px; height:100px;">this is a way to add logo, img or dirctory in a theme -->
 
 
     <!-- here we apply he bootstrap container class for practice purpose as bootstrap is including in a functions.php -->
@@ -35,4 +36,5 @@ get_header();
 <?php
 get_sidebar();
 get_footer();
+
 ?>
