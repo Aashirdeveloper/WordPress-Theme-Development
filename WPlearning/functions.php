@@ -1,16 +1,33 @@
 <?php
+
 // This is the functions.php file
 
-// it can add a custom logo functionality/support in the theme, customize > site identity
-add_theme_support('custom-logo');
+// support functions
+function wplearning_theme_setup(){
+    
+    // it can add a custom logo functionality/support in the theme, customize > site identity
+    add_theme_support('custom-logo');
+
+    // it can add the webpage title
+    add_theme_support('title-tag');
+    
+    // it can add/register a option of featured image in the post edit area
+    add_theme_support('post-thumbnails');
+    
+    // it can add/register a option of featured image in the post edit area
+    add_theme_support('automatic-feed-links');
+
+    // this function can register a menu in the WordPress dashboard
+    register_nav_menus( array(
+        'primary'   => __( 'Primary Menu', 'wplearning' ),
+        'secondary' => __( 'Secondary Menu', 'wplearning' ),
+        'footer' => __( 'Footer Menu', 'wplearning' ),
+    ) );
+}
+add_action('after_setup_theme', 'wplearning_theme_setup');
 
 
-// this function can register a menu in the WordPress dashboard
-register_nav_menus( array(
-    'primary'   => __( 'Primary Menu', 'wplearning' ),
-    'secondary' => __( 'Secondary Menu', 'wplearning' ),
-    'footer' => __( 'Footer Menu', 'wplearning' ),
-) );
+
 
 // styles and scripts can be called using wp_head() in the header .php
 function wplearning_theme_scripts() {
@@ -40,6 +57,54 @@ add_action('wp_enqueue_scripts', 'wplearning_theme_scripts');
 
 
 
+// it can add a side bar/widget area, appearence > then you see a widget menu
+function wplearning_widgets_init() {
+	register_sidebar( array(
+		'name'          => __( 'primary', 'theme_name' ),
+		'id'            => 'main-sidebar',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+    // for footer widgets
+	register_sidebar( array(
+		'name'          => __( 'footer-1', 'theme_name' ),
+		'id'            => 'footer-1',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+
+    register_sidebar( array(
+		'name'          => __( 'footer-2', 'theme_name' ),
+		'id'            => 'footer-2',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	
+    register_sidebar( array(
+		'name'          => __( 'footer-3', 'theme_name' ),
+		'id'            => 'footer-3',
+		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</aside>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
+	) );
+	
+	
+}
+add_action( 'widgets_init', 'wplearning_widgets_init' );
+
+
+
+
+
+
 // it can add the asynchronous to JS scripts for better loading
 function add_async_attribute($tag, $handle)
 {
@@ -57,7 +122,7 @@ function add_async_attribute($tag, $handle)
 add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
 
 
-?>
+
 
 
 
