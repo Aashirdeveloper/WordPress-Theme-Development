@@ -76,9 +76,28 @@ Author: Aashir Jamil
 .home-main {
     margin-top: 15px;
 }
-.home-posts {
+.home-post {
+    padding: 0px 10px !important;
+    margin-bottom: 15px;
+    width: 100%;
+    clear: both;
+    display: block;
+}
+.post-header .post-thumbnail a {
+    display: inline-block;
+    width: 100%;
+}
+.post-header .post-thumbnail img {
+    width: 100%;
+}
+.post-header h1 {
+    margin-top: 15px;
     background: #f0f0f0;
-    padding: 30px 30px !important;
+    padding: 10px;
+}
+.post-meta {
+    float: left;
+    margin-right: 10px;
 }
 /*********************
 04: Sidebar & Widgets

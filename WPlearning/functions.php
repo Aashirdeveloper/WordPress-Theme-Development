@@ -13,6 +13,9 @@ function wplearning_theme_setup(){
     
     // it can add/register a option of featured image in the post edit area
     add_theme_support('post-thumbnails');
+
+    // this can add a image size in WordPress as home-feaured and we can call it where you can want
+    add_image_size('home-featured', 680, 400, array('center','center'));
     
     // it can add/register a option of featured image in the post edit area
     add_theme_support('automatic-feed-links');
