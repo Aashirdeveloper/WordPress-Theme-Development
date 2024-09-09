@@ -124,3 +124,44 @@ Author: Aashir Jamil
     background: #333333;
     height: 200px;
 }
+
+/* 09-09-2024/Monday  */
+
+.pagination {
+    display: inline-block;
+    text-align: center;
+    padding: 10px;
+}
+
+.pagination a, .page-numbers.current {
+
+    
+    padding: 10px 15px;
+    background: #f0f0f0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+    color: #333333;
+    margin: 0 3px;
+    text-decoration: none;
+}
+
+.page-numbers.current{
+    background-color: white;
+}
+
+.custom-header{
+    margin-bottom: 10px;
+
+}
+
+.post-image, .post-title, .post-meta-row, .post-content {
+    width: 100%;
+    clear: both;
+    margin-bottom: 10px;
+}
+.post-image {
+    text-align: center;
+}
+.post-container {
+    margin-top: 15px;
+}

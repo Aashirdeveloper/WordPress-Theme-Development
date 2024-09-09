@@ -9,20 +9,32 @@ get_header();
 ?>
 
 
-<?php
-if (have_posts()): // its a function it can fetch all the posts hirerechly
-    while (have_posts()):
-        the_post();
-        ?>
-        <!-- // Display post content -->
-
-        <h1> <?php the_title(); ?> </h1>
-        <h3> <?php the_content(); ?> </h3>
-        <?php
-    endwhile;
-endif;
-?>
-
+<!-- 09-09-2024/Monday -->
+<div class="post-container">
+        
+        <?php if ( have_posts() ) : ?>
+            <?php while ( have_posts() ) : the_post(); ?>
+            <div class="post-image">
+                <?php the_post_thumbnail('home-featured') ?>
+            </div>
+            <div class="post-title">
+                <h1><?php the_title() ?></h1>
+            </div>
+            <div class="post-meta-row">
+                <div class="post-meta">
+                    <strong>Author: </strong> <?php the_author(); ?>
+                </div>
+                <div class="post-meta">
+                    <strong>Posted on: </strong> <?php the_time(); ?>
+                </div>
+            </div>
+            <div class="post-content">
+                <?php the_content() ?>
+            </div>
+            <?php endwhile; ?>
+        <?php endif; ?>
+    </div>
+        
 
 
 

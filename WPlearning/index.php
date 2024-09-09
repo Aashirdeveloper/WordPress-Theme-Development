@@ -16,6 +16,14 @@ get_header();
 
 <!-- here we apply he bootstrap container class for practice purpose as bootstrap is including in a functions.php -->
 <div class="home-main">
+
+ <!-- 09-09-2024/Monday -->
+     
+ <div class="custom-header">
+        <img src="<?php header_image(); ?>" width="<?php echo absint(get_custom_header()->width) ?>"
+            width="<?php echo absint(get_custom_header()->height) ?>" class="img-fluid">
+    </div>
+
     <div class="row mr-0 ml-0">
         <div class="home-posts col-lg-8 col-xs-12">
             <?php
@@ -62,6 +70,13 @@ get_header();
                 endwhile;
             endif;
             ?>
+
+             <!-- 09-09-2024/Monday -->
+            <!-- it can add a pagination like next, prevvious -->
+            <div class="pagination row ml-0 mr-0">
+                <?php echo paginate_links() ?>
+            </div>
+
         </div>
         <div class="home-sidebar col-lg-4 co-xs-12>">
             <?php get_sidebar(); ?>
