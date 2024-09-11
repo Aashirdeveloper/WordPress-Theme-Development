@@ -10,22 +10,26 @@ Author: Aashir Jamil
 .site-header {
     height: 150px;
     background: #f0f0f0;
-    
+
 }
+
 .site-branding {
     text-align: center;
     width: 100%;
-    clear: both;   
+    clear: both;
 }
+
 .site-branding a {
     display: inline-block;
     margin-top: 20px;
-    
+
 }
+
 .site-branding img {
     max-width: 200px;
     max-height: 100px;
 }
+
 /******************
 02: Main Menu
 ******************/
@@ -36,6 +40,7 @@ Author: Aashir Jamil
     background: #2ca358;
     height: 60px;
 }
+
 .site-navigation ul {
     margin: 0;
     padding: 0;
@@ -44,11 +49,13 @@ Author: Aashir Jamil
     clear: both;
     text-align: center
 }
+
 .site-navigation ul li {
     display: inline-block;
     height: 60px;
     margin-left: -4px;
 }
+
 .site-navigation ul li a {
     display: inline-block;
     height: 100%;
@@ -58,24 +65,30 @@ Author: Aashir Jamil
     border-right: 1px solid #83cb8d;
     text-decoration: none;
 }
+
 .site-navigation ul li a:hover {
     text-decoration: none;
-    background: rgba(0,0,0,0.7)
+    background: rgba(0, 0, 0, 0.7)
 }
+
 .site-navigation ul li:first-child a {
     border-left: 1px solid #83cb8d;
 }
+
 .site-navigation ul li.current-menu-item a,
 .site-navigation ul li.current_page_item a {
-    border-bottom: 2px solid #002293; /* Underline active item */
-    
+    border-bottom: 2px solid #002293;
+    /* Underline active item */
+
 }
+
 /******************
 03: Home Content
 ******************/
 .home-main {
     margin-top: 15px;
 }
+
 .home-post {
     padding: 0px 10px !important;
     margin-bottom: 15px;
@@ -83,32 +96,45 @@ Author: Aashir Jamil
     clear: both;
     display: block;
 }
+
 .post-header .post-thumbnail a {
     display: inline-block;
     width: 100%;
 }
+
 .post-header .post-thumbnail img {
     width: 100%;
 }
+
 .post-header h1 {
     margin-top: 15px;
     background: #f0f0f0;
     padding: 10px;
+
 }
+
+.post-header .underline {
+    text-decoration: none;
+
+}
+
 .post-meta {
     float: left;
     margin-right: 10px;
 }
+
 /*********************
 04: Sidebar & Widgets
 *********************/
 .home-sidebar {
     background: #ddd;
 }
+
 .widget {
     padding: 10px;
     margin-bottom: 10px;
 }
+
 .widget-title {
     margin: 0 0 10px 0;
     padding: 10px 15px;
@@ -116,6 +142,7 @@ Author: Aashir Jamil
     color: #f0f0f0;
     font-size: 20px;
 }
+
 /*********************
 05: Footer
 *********************/
@@ -165,3 +192,18 @@ Author: Aashir Jamil
 .post-container {
     margin-top: 15px;
 }
+
+/* 11-09-2024/Wednesday */
+
+.home-posts .section-head {
+    padding: 10px;
+    background: #2ca358;
+    color: #fff;
+ }
+ .home-posts .section-head h3 {
+     margin: 0;
+ }
+ .home-posts .section-content {
+     padding: 5px;
+ }
+ 
