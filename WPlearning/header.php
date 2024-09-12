@@ -19,6 +19,14 @@ This is basically a part of template file, it is called multiple times in a webs
 
    
     <?php wp_head(); ?>
+
+
+    <!-- 12-09-2024/Thursday -->
+    <style type="text/css">
+        .site-navigation {
+            background: <?php echo get_theme_mod('wplearning_nav_bg_color', '#2ca358') ?>
+        }
+    </style>"
 </head>
 
 <body>
