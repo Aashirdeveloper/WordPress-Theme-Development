@@ -138,6 +138,15 @@ function add_async_attribute($tag, $handle)
 add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
 
 
+//Include Customizer
+require get_template_directory() .'/inc/customizer.php';
+
+
+//  13-09-2024/Friday 
+
+//Include Custom post Services
+require get_template_directory() .'/inc/services.php';
+
 
 
 

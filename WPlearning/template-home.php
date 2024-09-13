@@ -20,6 +20,21 @@ get_header();
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <div class="flex-row ml-0 mr-0 mt-0 text-center">
     <?php
     if (have_posts()): // its a function it can fetch all the posts hirerechly
@@ -34,6 +49,47 @@ get_header();
         endwhile;
     endif;
     ?>
+</div>
+
+
+<!--  13-09-2024/Friday -->
+
+<div class="home-services ml-0 mr-0 mt-5 row">
+
+<?php
+
+             $args = array(
+                'post_type' => 'service',
+                'order' => 'ASC'
+             );
+             $tech_posts = new WP_Query($args);
+
+             if ($tech_posts->have_posts()): // its a function it can fetch all the posts hirerechly
+                while ($tech_posts->have_posts()):
+                    $tech_posts->the_post();
+            ?>
+
+                    <div class="home-service-col col-4">
+                        <div class="home-service-thumb co-12-4 pl-0">
+                            <?php the_post_thumbnail('medium', array('class' => 'img-fluid')) ?>
+
+                        </div>
+                        <div class="post-title col-8">
+                            <h3><a href="<?php echo get_the_permalink(get_the_ID()) ?>"><?php the_title() ?></a></h3>
+
+                            <p><?php the_excerpt(); ?></p>
+                        </div>
+
+
+                    </div>
+
+                    <!-- // Display post content -->
+
+                    <?php
+                endwhile;
+            endif;
+            ?>
+
 </div>
 
 
