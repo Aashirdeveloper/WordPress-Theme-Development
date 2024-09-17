@@ -93,6 +93,27 @@ get_header();
 </div>
 
 
+
+<!-- 17-09-2024/Tuesday -->
+
+<div class="home-carousel row ml-0 mr-0 mt-5">
+
+    <!-- Set up your HTML -->
+    <div class="owl-carousel ">
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+        <div> Your Content </div>
+    </div>
+
+</div>
+
+
+
+
 <!-- 11-09-2024/Wednesday -->
 <div class="home-posts row ml-0 mr-0 mt-5 ">
     <div class="col">

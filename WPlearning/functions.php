@@ -51,6 +51,10 @@ function wplearning_theme_scripts() {
     // bootstrap CSS
     wp_enqueue_style('bootstrap-css', get_template_directory_uri().'/assets/bootstrap/css/bootstrap.min.css');
 
+    // 17-09-2024/Tuesday
+    // owl-carousel css
+    wp_enqueue_style('owl-carousel-css', get_template_directory_uri().'/owl-carousel/assets/owl.carousel.min.css');
+
     // for css
     wp_enqueue_style('style', get_stylesheet_uri());
 
@@ -60,8 +64,17 @@ function wplearning_theme_scripts() {
     // for bootstrap javascript
     wp_enqueue_script('bootstrap-js', get_template_directory_uri() . '/assets/bootstrap/js/bootstrap.bundle.min.js');
 
+    // 17-09-2024/Tuesday
+
+    // for owl-carousel javascript
+    wp_enqueue_script('owl-carousel-js', get_template_directory_uri() . '/owl-carousel/owl.carousel.min.js');
+      
+    // 
     // for js
-     wp_enqueue_script('my-slider', get_template_directory_uri() . '/assets/js/main.js');
+    //  wp_enqueue_script('my-slider', get_template_directory_uri() . '/assets/js/main.js');
+     
+    // 17-09-2024/Tuesday
+     wp_enqueue_script('main-js', get_template_directory_uri() . '/assets/js/main.js');
 
 
 }
@@ -148,7 +161,10 @@ require get_template_directory() .'/inc/customizer.php';
 require get_template_directory() .'/inc/services.php';
 
 
+//  17-09-2024/Tuesday 
 
+//Include Custom post Projects
+require get_template_directory() .'/inc/projects.php';
 
 
 
