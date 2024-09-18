@@ -98,16 +98,39 @@ get_header();
 
 <div class="home-carousel row ml-0 mr-0 mt-5">
 
-    <!-- Set up your HTML -->
-    <div class="owl-carousel ">
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
-        <div> Your Content </div>
+   <!-- 18-09-2024/Wednesday -->
+
+   <div class="owl-carousel">
+        <?php
+
+        $args = array(
+            'post_type' => 'project',
+            'posts_per_page' => 5,
+            'order' => 'ASC'
+        );
+        $tech_posts = new WP_Query($args);
+
+        if ($tech_posts->have_posts()): // its a function it can fetch all the posts hirerechly
+            while ($tech_posts->have_posts()):
+                $tech_posts->the_post();
+                ?>
+
+                <div>
+                    <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('medium') ?></a>
+
+
+
+                </div>
+
+
+                <!-- // Display post content -->
+
+                <?php
+            endwhile;
+        endif;
+        ?>
     </div>
+
 
 </div>
 
