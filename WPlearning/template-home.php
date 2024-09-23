@@ -115,8 +115,12 @@ get_header();
                 $tech_posts->the_post();
                 ?>
 
-                <div>
-                    <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('medium') ?></a>
+<div>
+                    <!-- 23-09-2024/Monday -->
+                    <?php $project_url = get_post_meta(get_the_ID(), 'typeyoururl_url', true) ?>
+                    <a href="<?php echo $project_url ?>" target="_blank"><?php the_post_thumbnail('medium') ?></a>
+                    
+                    <!-- <a href="<?php the_permalink() ?>"><?php the_post_thumbnail('medium') ?></a> -->
 
 
 
